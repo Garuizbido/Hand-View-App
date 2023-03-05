@@ -13,7 +13,7 @@ struct ContentView: View {
     
     @StateObject private var manager = CameraManager()
     
-    @State private var maxDepth = Float(5.0)
+    @State private var maxDepth = Float(10.0)
     @State private var minDepth = Float(0.0)
     @State private var scaleMovement = Float(1.0)
     

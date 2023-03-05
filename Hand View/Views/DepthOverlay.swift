@@ -27,8 +27,7 @@ struct DepthOverlay: View {
                         maxDepth: $maxDepth,
                         minDepth: $minDepth,
                         capturedData: manager.capturedData
-                    )
-                        .opacity(Double(opacity))
+                    ).opacity(Double(opacity))
                 }.edgesIgnoringSafeArea(.all)
             }
         }
