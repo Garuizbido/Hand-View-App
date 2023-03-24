@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		399017D129CE35E800C906F6 /* BluetoothManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399017D029CE35E800C906F6 /* BluetoothManager.swift */; };
 		39F3BC33299DBF9600031E41 /* Hand_ViewApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F3BC32299DBF9600031E41 /* Hand_ViewApp.swift */; };
 		39F3BC35299DBF9600031E41 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F3BC34299DBF9600031E41 /* ContentView.swift */; };
 		39F3BC37299DBF9900031E41 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39F3BC36299DBF9900031E41 /* Assets.xcassets */; };
 		39F3BC3A299DBF9900031E41 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39F3BC39299DBF9900031E41 /* Preview Assets.xcassets */; };
 		39F3BC5E299DC14C00031E41 /* DepthOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F3BC5D299DC14C00031E41 /* DepthOverlay.swift */; };
-		39F3BC60299DC16300031E41 /* ZoomOnTap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F3BC5F299DC16300031E41 /* ZoomOnTap.swift */; };
 		39F3BC62299DC17F00031E41 /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F3BC61299DC17F00031E41 /* View+Extensions.swift */; };
 		39F3BC64299DC19400031E41 /* CameraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F3BC63299DC19400031E41 /* CameraController.swift */; };
 		39F3BC68299DC1D400031E41 /* CameraManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F3BC67299DC1D400031E41 /* CameraManager.swift */; };
@@ -46,6 +46,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		399017D029CE35E800C906F6 /* BluetoothManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothManager.swift; sourceTree = "<group>"; };
+		399017D229CE3A2900C906F6 /* Hand-View-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Hand-View-Info.plist"; sourceTree = SOURCE_ROOT; };
 		39F3BC2F299DBF9600031E41 /* Hand View.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hand View.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		39F3BC32299DBF9600031E41 /* Hand_ViewApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hand_ViewApp.swift; sourceTree = "<group>"; };
 		39F3BC34299DBF9600031E41 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -54,7 +56,6 @@
 		39F3BC3F299DBF9900031E41 /* Hand ViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Hand ViewTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		39F3BC49299DBF9900031E41 /* Hand ViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Hand ViewUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		39F3BC5D299DC14C00031E41 /* DepthOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepthOverlay.swift; sourceTree = "<group>"; };
-		39F3BC5F299DC16300031E41 /* ZoomOnTap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomOnTap.swift; sourceTree = "<group>"; };
 		39F3BC61299DC17F00031E41 /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
 		39F3BC63299DC19400031E41 /* CameraController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraController.swift; sourceTree = "<group>"; };
 		39F3BC67299DC1D400031E41 /* CameraManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraManager.swift; sourceTree = "<group>"; };
@@ -117,6 +118,7 @@
 		39F3BC31299DBF9600031E41 /* Hand View */ = {
 			isa = PBXGroup;
 			children = (
+				399017D229CE3A2900C906F6 /* Hand-View-Info.plist */,
 				39F3BC63299DC19400031E41 /* CameraController.swift */,
 				39F3BC66299DC1C400031E41 /* Model */,
 				39F3BC5C299DC11D00031E41 /* Views */,
@@ -141,7 +143,6 @@
 			children = (
 				39F3BC5D299DC14C00031E41 /* DepthOverlay.swift */,
 				39F3BC34299DBF9600031E41 /* ContentView.swift */,
-				39F3BC5F299DC16300031E41 /* ZoomOnTap.swift */,
 				39F3BC61299DC17F00031E41 /* View+Extensions.swift */,
 				39F3BC6B299DC20900031E41 /* Metal */,
 			);
@@ -152,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				39F3BC67299DC1D400031E41 /* CameraManager.swift */,
+				399017D029CE35E800C906F6 /* BluetoothManager.swift */,
 				39F3BC69299DC1F900031E41 /* CVPixelBuffer+Extension.swift */,
 			);
 			path = Model;
@@ -317,8 +319,8 @@
 				39F3BC75299DC2BD00031E41 /* MetalTextureColorThresholdDepth.swift in Sources */,
 				39F3BC7D299DC2BD00031E41 /* MetalPointCloud.swift in Sources */,
 				39F3BC35299DBF9600031E41 /* ContentView.swift in Sources */,
-				39F3BC60299DC16300031E41 /* ZoomOnTap.swift in Sources */,
 				39F3BC33299DBF9600031E41 /* Hand_ViewApp.swift in Sources */,
+				399017D129CE35E800C906F6 /* BluetoothManager.swift in Sources */,
 				39F3BC77299DC2BD00031E41 /* MetalTextureColorZap.swift in Sources */,
 				39F3BC6A299DC1F900031E41 /* CVPixelBuffer+Extension.swift in Sources */,
 				39F3BC7C299DC2BD00031E41 /* MetalTextureViewDepth.swift in Sources */,
@@ -487,7 +489,10 @@
 				DEVELOPMENT_TEAM = TDPRWT9MU7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Hand-View-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "";
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Please allow using bluetooth for this device";
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -523,7 +528,10 @@
 				DEVELOPMENT_TEAM = TDPRWT9MU7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Hand-View-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "";
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Please allow using bluetooth for this device";
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
