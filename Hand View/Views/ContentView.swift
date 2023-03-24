@@ -3,7 +3,7 @@
 //  Hand View
 //
 //  Created by Gabriel A. Ruiz Bido on 2/15/23.
-//Jackie
+//
 
 import SwiftUI
 import MetalKit
