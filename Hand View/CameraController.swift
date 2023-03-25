@@ -145,7 +145,9 @@ class CameraController: NSObject, ObservableObject {
     }
     
     func startStream() {
-        captureSession.startRunning()
+        DispatchQueue.global().async {
+            self.captureSession.startRunning()
+        }
     }
     
     func stopStream() {
