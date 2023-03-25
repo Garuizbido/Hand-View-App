@@ -15,6 +15,8 @@ extension CVPixelBuffer {
         let width = CVPixelBufferGetWidthOfPlane(self, planeIndex)
         let height = CVPixelBufferGetHeightOfPlane(self, planeIndex)
         
+        print(height)
+        
         var cvtexture: CVMetalTexture?
         CVMetalTextureCacheCreateTextureFromImage(nil, cache, self, nil, pixelFormat, width, height, planeIndex, &cvtexture)
         guard let texture = cvtexture else { return nil }

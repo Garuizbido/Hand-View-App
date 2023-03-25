@@ -14,11 +14,11 @@ struct ContentView: View {
     @StateObject private var manager = CameraManager()
     @State private var bluetoothManager = BluetoothManager()
     
-    @State private var maxDepth = Float(20.0)
+    @State private var maxDepth = Float(5.0)
     @State private var minDepth = Float(0.0)
     @State private var scaleMovement = Float(1.0)
     
-    let maxRangeDepth = Float(20)
+    let maxRangeDepth = Float(15)
     let minRangeDepth = Float(0)
     
     var body: some View {
