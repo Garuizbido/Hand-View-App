@@ -12,7 +12,7 @@ import Metal
 struct ContentView: View {
     
     @StateObject private var manager = CameraManager()
-    @State private var bluetoothManager = BluetoothManager()
+    
     
     @State private var maxDepth = Float(5.0)
     @State private var minDepth = Float(0.0)

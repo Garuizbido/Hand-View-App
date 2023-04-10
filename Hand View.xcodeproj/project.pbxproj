@@ -26,6 +26,7 @@
 		39F3BC7C299DC2BD00031E41 /* MetalTextureViewDepth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F3BC73299DC2BD00031E41 /* MetalTextureViewDepth.swift */; };
 		39F3BC7D299DC2BD00031E41 /* MetalPointCloud.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F3BC74299DC2BD00031E41 /* MetalPointCloud.swift */; };
 		39F3BC82299DC34B00031E41 /* shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 39F3BC81299DC34B00031E41 /* shaders.metal */; };
+		4D2F9C9E29CF4D24008276F5 /* QuadrantsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2F9C9D29CF4D24008276F5 /* QuadrantsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		39F3BC74299DC2BD00031E41 /* MetalPointCloud.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetalPointCloud.swift; sourceTree = "<group>"; };
 		39F3BC81299DC34B00031E41 /* shaders.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = shaders.metal; sourceTree = "<group>"; };
 		39F3BC87299DCCB400031E41 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4D2F9C9D29CF4D24008276F5 /* QuadrantsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuadrantsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +156,7 @@
 			children = (
 				39F3BC67299DC1D400031E41 /* CameraManager.swift */,
 				399017D029CE35E800C906F6 /* BluetoothManager.swift */,
+				4D2F9C9D29CF4D24008276F5 /* QuadrantsView.swift */,
 				39F3BC69299DC1F900031E41 /* CVPixelBuffer+Extension.swift */,
 			);
 			path = Model;
@@ -319,6 +322,7 @@
 				39F3BC75299DC2BD00031E41 /* MetalTextureColorThresholdDepth.swift in Sources */,
 				39F3BC7D299DC2BD00031E41 /* MetalPointCloud.swift in Sources */,
 				39F3BC35299DBF9600031E41 /* ContentView.swift in Sources */,
+				4D2F9C9E29CF4D24008276F5 /* QuadrantsView.swift in Sources */,
 				39F3BC33299DBF9600031E41 /* Hand_ViewApp.swift in Sources */,
 				399017D129CE35E800C906F6 /* BluetoothManager.swift in Sources */,
 				39F3BC77299DC2BD00031E41 /* MetalTextureColorZap.swift in Sources */,
