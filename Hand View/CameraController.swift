@@ -11,7 +11,6 @@ import CoreImage
 
 protocol CaptureDataReceiver: AnyObject {
     func onNewData(capturedData: CameraCapturedData)
-    func onNewPhotoData(capturedData: CameraCapturedData)
 }
 
 class CameraController: NSObject, ObservableObject {
@@ -178,45 +177,4 @@ extension CameraController: AVCaptureDataOutputSynchronizerDelegate {
     }
 }
 
-// MARK: Photo Capture Delegate
-extension CameraController: AVCapturePhotoCaptureDelegate {
-    
-    func capturePhoto() {
-        var photoSettings: AVCapturePhotoSettings
-        if  photoOutput.availablePhotoPixelFormatTypes.contains(kCVPixelFormatType_420YpCbCr8BiPlanarFullRange) {
-            photoSettings = AVCapturePhotoSettings(format: [
-                kCVPixelBufferPixelFormatTypeKey as String: kCVPixelFormatType_420YpCbCr8BiPlanarFullRange
-            ])
-        } else {
-            photoSettings = AVCapturePhotoSettings()
-        }
-        
-        // Capture depth data with this photo capture.
-        photoSettings.isDepthDataDeliveryEnabled = true
-        photoOutput.capturePhoto(with: photoSettings, delegate: self)
-    }
-    
-    func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
-        
-        // Retrieve the image and depth data.
-        guard let pixelBuffer = photo.pixelBuffer,
-              let depthData = photo.depthData,
-              let cameraCalibrationData = depthData.cameraCalibrationData else { return }
-        
-        // Stop the stream until the user returns to streaming mode.
-        stopStream()
-        
-        // Convert the depth data to the expected format.
-        let convertedDepth = depthData.converting(toDepthDataType: kCVPixelFormatType_DepthFloat16)
-        
-        // Package the captured data.
-        let data = CameraCapturedData(depth: convertedDepth.depthDataMap.texture(withFormat: .r16Float, planeIndex: 0, addToCache: textureCache),
-                                      colorY: pixelBuffer.texture(withFormat: .r8Unorm, planeIndex: 0, addToCache: textureCache),
-                                      colorCbCr: pixelBuffer.texture(withFormat: .rg8Unorm, planeIndex: 1, addToCache: textureCache),
-                                      cameraIntrinsics: cameraCalibrationData.intrinsicMatrix,
-                                      cameraReferenceDimensions: cameraCalibrationData.intrinsicMatrixReferenceDimensions)
-        
-        delegate?.onNewPhotoData(capturedData: data)
-    }
-}
 

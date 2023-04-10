@@ -60,7 +60,7 @@ final class MTKDepthTextureCoordinator: MTKCoordinator<MetalTextureDepthView> {
         encoder.setVertexBytes(vertexData, length: vertexData.count * MemoryLayout<Float>.stride, index: 0)
         encoder.setFragmentBytes(&parent.minDepth, length: MemoryLayout<Float>.stride, index: 0)
         encoder.setFragmentBytes(&parent.maxDepth, length: MemoryLayout<Float>.stride, index: 1)
-        encoder.setFragmentTexture(parent.capturedData.depth!, index: 0)
+        encoder.setFragmentTexture(parent.capturedData.depth, index: 0)
         encoder.setDepthStencilState(depthState)
         encoder.setRenderPipelineState(pipelineState)
         encoder.drawPrimitives(type: .triangleStrip, vertexStart: 0, vertexCount: 4)

@@ -18,10 +18,6 @@ struct DepthOverlay: View {
         if manager.dataAvailable {
             VStack {
                 ZStack {
-                    MetalTextureViewColor(
-                        rotationAngle: rotationAngle,
-                        capturedData: manager.capturedData
-                    )
                     MetalTextureDepthView(
                         rotationAngle: rotationAngle,
                         maxDepth: $maxDepth,
