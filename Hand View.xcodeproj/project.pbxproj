@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3953A5E729E5F43D00B456C6 /* QuadrantsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3953A5E629E5F43D00B456C6 /* QuadrantsManager.swift */; };
 		399017D129CE35E800C906F6 /* BluetoothManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399017D029CE35E800C906F6 /* BluetoothManager.swift */; };
-		39C8702329CF99C200CFE097 /* DepthArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C8702229CF99C200CFE097 /* DepthArray.swift */; };
 		39F3BC33299DBF9600031E41 /* Hand_ViewApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F3BC32299DBF9600031E41 /* Hand_ViewApp.swift */; };
 		39F3BC35299DBF9600031E41 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F3BC34299DBF9600031E41 /* ContentView.swift */; };
 		39F3BC37299DBF9900031E41 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39F3BC36299DBF9900031E41 /* Assets.xcassets */; };
@@ -27,7 +27,6 @@
 		39F3BC7C299DC2BD00031E41 /* MetalTextureViewDepth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F3BC73299DC2BD00031E41 /* MetalTextureViewDepth.swift */; };
 		39F3BC7D299DC2BD00031E41 /* MetalPointCloud.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F3BC74299DC2BD00031E41 /* MetalPointCloud.swift */; };
 		39F3BC82299DC34B00031E41 /* shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 39F3BC81299DC34B00031E41 /* shaders.metal */; };
-		4D2F9C9E29CF4D24008276F5 /* QuadrantsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2F9C9D29CF4D24008276F5 /* QuadrantsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,9 +47,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3953A5E629E5F43D00B456C6 /* QuadrantsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuadrantsManager.swift; sourceTree = "<group>"; };
 		399017D029CE35E800C906F6 /* BluetoothManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothManager.swift; sourceTree = "<group>"; };
 		399017D229CE3A2900C906F6 /* Hand-View-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Hand-View-Info.plist"; sourceTree = SOURCE_ROOT; };
-		39C8702229CF99C200CFE097 /* DepthArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepthArray.swift; sourceTree = "<group>"; };
 		39F3BC2F299DBF9600031E41 /* Hand View.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hand View.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		39F3BC32299DBF9600031E41 /* Hand_ViewApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hand_ViewApp.swift; sourceTree = "<group>"; };
 		39F3BC34299DBF9600031E41 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -73,7 +72,6 @@
 		39F3BC74299DC2BD00031E41 /* MetalPointCloud.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetalPointCloud.swift; sourceTree = "<group>"; };
 		39F3BC81299DC34B00031E41 /* shaders.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = shaders.metal; sourceTree = "<group>"; };
 		39F3BC87299DCCB400031E41 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4D2F9C9D29CF4D24008276F5 /* QuadrantsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuadrantsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,10 +154,9 @@
 		39F3BC66299DC1C400031E41 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				3953A5E629E5F43D00B456C6 /* QuadrantsManager.swift */,
 				39F3BC67299DC1D400031E41 /* CameraManager.swift */,
-				39C8702229CF99C200CFE097 /* DepthArray.swift */,
 				399017D029CE35E800C906F6 /* BluetoothManager.swift */,
-				4D2F9C9D29CF4D24008276F5 /* QuadrantsView.swift */,
 				39F3BC69299DC1F900031E41 /* CVPixelBuffer+Extension.swift */,
 			);
 			path = Model;
@@ -325,8 +322,8 @@
 				39F3BC75299DC2BD00031E41 /* MetalTextureColorThresholdDepth.swift in Sources */,
 				39F3BC7D299DC2BD00031E41 /* MetalPointCloud.swift in Sources */,
 				39F3BC35299DBF9600031E41 /* ContentView.swift in Sources */,
-				4D2F9C9E29CF4D24008276F5 /* QuadrantsView.swift in Sources */,
 				39F3BC33299DBF9600031E41 /* Hand_ViewApp.swift in Sources */,
+				3953A5E729E5F43D00B456C6 /* QuadrantsManager.swift in Sources */,
 				399017D129CE35E800C906F6 /* BluetoothManager.swift in Sources */,
 				39F3BC77299DC2BD00031E41 /* MetalTextureColorZap.swift in Sources */,
 				39F3BC6A299DC1F900031E41 /* CVPixelBuffer+Extension.swift in Sources */,
@@ -337,7 +334,6 @@
 				39F3BC62299DC17F00031E41 /* View+Extensions.swift in Sources */,
 				39F3BC82299DC34B00031E41 /* shaders.metal in Sources */,
 				39F3BC5E299DC14C00031E41 /* DepthOverlay.swift in Sources */,
-				39C8702329CF99C200CFE097 /* DepthArray.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
