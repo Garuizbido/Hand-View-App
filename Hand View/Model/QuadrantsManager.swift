@@ -63,7 +63,9 @@ class QuadrantManager {//points are 320x240
             }
         }
         print(quadrantAverage)
-        //bluetoothManager.writeValue(i)
+        for i in quadrantAverage{
+            bluetoothManager.writeValue(i)
+        }
     }
 }
 
