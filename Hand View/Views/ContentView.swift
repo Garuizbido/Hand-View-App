@@ -58,13 +58,13 @@ struct ContentView: View {
     @State private var quadrantManager = QuadrantManager()
     
     
-    @State private var maxDepth = Float(5.0)
+    @State private var maxDepth = Float(4.0)
     @State private var minDepth = Float(0.0)
-    @State private var scaleMovement = Float(1.0)
+    @State private var scaleMovement = Float(0.5)
     
     
     
-    let maxRangeDepth = Float(15)
+    let maxRangeDepth = Float(20)
     let minRangeDepth = Float(0)
     
     var body: some View {
@@ -76,46 +76,11 @@ struct ContentView: View {
             .aspectRatio(calcAspect(orientation: viewOrientation, texture: cameraManager.capturedData.depth), contentMode: .fit)
             .onTapGesture {
                 if let texture = cameraManager.capturedData.colorY{
-                    let color = colorOfPixel(in: texture, at: CGPoint(x: 0.5, y: 0.5))
-                    var redComponent: CGFloat = 0.0
-                    var greenComponent: CGFloat = 0.0
-                    var blueComponent: CGFloat = 0.0
-                    var alphaComponent: CGFloat = 0.0
-                    color.getRed(&redComponent, green: &greenComponent, blue: &blueComponent, alpha: &alphaComponent)
+                    quadrantManager.test(in: texture)
                 }
             }
         }
     }
-}
-
-func colorOfPixel(in texture: MTLTexture, at point: CGPoint) -> UIColor {
-    let width = texture.width
-    let height = texture.height
-
-    // Calculate the row and column of the pixel
-    let column = Int(point.x * CGFloat(width))
-    let row = Int(point.y * CGFloat(height))
-    
-    print(row)
-    print(column)
-
-    // Calculate the index of the pixel in the data array
-    let bytesPerPixel = 4 // RGBA
-    let bytesPerRow = bytesPerPixel * width
-
-    // Get the pixel data from the texture
-    var pixelData = [UInt8](repeating: 0, count: bytesPerPixel)
-    let region = MTLRegionMake2D(column, row, 1, 1)
-    texture.getBytes(&pixelData, bytesPerRow: bytesPerRow, from: region, mipmapLevel: 0)
-
-    // Extract the color information from the pixel data
-    let red = CGFloat(pixelData[0])/255
-    let green = CGFloat(pixelData[1])/255
-    let blue = CGFloat(pixelData[2])/255
-    
-    print("Red component: \(red)")
-
-    return  UIColor(red: red, green: green, blue: blue, alpha: 1.0)
 }
 
 
